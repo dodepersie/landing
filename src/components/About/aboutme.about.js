@@ -8,7 +8,7 @@ const AboutMe = () => {
 
     return (
         <>
-        <div className='d-flex justify-content-center align-items-start pt-4' id='about'>
+        <div className='d-flex justify-content-center align-items-start pt-4' id='about' data-aos='fade-right' data-aos-duration="1000">
             <div className='user-select-none animate fadeInLeft animatex'>
                 <Container className='pt-1 pt-md-5 my-5'>
                     <Row xs='6'>
@@ -26,6 +26,7 @@ const AboutMe = () => {
                         </Col>
                         <Col xs='12' md='4' className='mt-2'>
                             <div className='text-green fw-semibold'>
+                                <div data-aos='fade-up' data-aos-duration="1000">
                                 <Card>
                                 <Card.Body>
                                 <Card.Title>
@@ -74,7 +75,9 @@ const AboutMe = () => {
                                 </Card.Text>
                                 </Card.Body>
                                 </Card>
+                                </div>
 
+                                <div data-aos='fade-up' data-aos-duration="1000">
                                 <Card className='mt-2 mt-md-5'>
                                 <Card.Body>
                                 <Card.Title>
@@ -131,10 +134,12 @@ const AboutMe = () => {
                                 </Card.Text>
                                 </Card.Body>
                                 </Card>
+                                </div>
                             </div>
                         </Col>
                         <Col xs='12' md='4' className='mt-2'>
                             <div className='text-green fw-semibold'>
+                                <div data-aos='fade-up' data-aos-duration="1000">
                                 <Card>
                                 <Card.Body>
                                 <Card.Title>
@@ -157,7 +162,9 @@ const AboutMe = () => {
                                 </Card.Text>
                                 </Card.Body>
                                 </Card>
+                                </div>
 
+                                <div data-aos='fade-up' data-aos-duration="1000">
                                 <Card className='mt-2 mt-md-5'>
                                 <Card.Body>
                                 <Card.Title className='fs-2'>
@@ -194,7 +201,9 @@ const AboutMe = () => {
                                 </Card.Text>
                                 </Card.Body>
                                 </Card>
+                                </div>
 
+                                <div data-aos='fade-up' data-aos-duration="1000">
                                 <Card className='mt-2 mt-md-5'>
                                 <Card.Body>
                                 <Card.Title>
@@ -230,6 +239,7 @@ const AboutMe = () => {
                                 </Card.Text>
                                 </Card.Body>
                                 </Card>
+                                </div>
                             </div>
                         </Col>
                     </Row>

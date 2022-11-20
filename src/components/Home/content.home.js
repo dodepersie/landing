@@ -6,7 +6,7 @@ const Content = () => {
 
     return (
         <>
-        <div className='d-flex justify-content-center align-items-start pt-4' id='about'>
+        <div className='d-flex justify-content-center align-items-start pt-4' id='about' data-aos='fade-up' data-aos-duration="1000">
             <div className='user-select-none'>
                 <Container className='pt-2 my-5'>
                     <Row xs='6'>
