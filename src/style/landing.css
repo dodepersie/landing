@@ -1,72 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    -webkit-animation: fadeIn .75s;
-    /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadeIn .75s;
-    /* Firefox < 16 */
-    -ms-animation: fadeIn .75s;
-    /* Internet Explorer */
-    -o-animation: fadeIn .75s;
-    /* Opera < 12.1 */
-    animation: fadeIn .75s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* Firefox < 16 */
-
-@-moz-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* Safari, Chrome and Opera > 12.1 */
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* Internet Explorer */
-
-@-ms-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* Opera < 12.1 */
-
-@-o-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .navbar-default {
@@ -91,28 +25,7 @@ body {
 }
 
 .title span {
-    transition: 1s;
     color: #007bff;
-}
-
-.title span::before {
-    content: "Landing Page";
-    animation: animate infinite 10s;
-}
-
-@keyframes animate {
-    0% {
-        content: "Official Site";
-        transition: .25s linear;
-    }
-    50% {
-        content: "Portofolio Page";
-        transition: .25s linear;
-    }
-    75% {
-        content: "CV Site";
-        transition: .25s linear;
-    }
 }
 
 .headerImg {
@@ -168,22 +81,6 @@ body {
 .card {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border: none;
-}
-
-
-/*=== Trigger  ===*/
-
-.animate {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.animatex {
-    -webkit-animation-delay: .75s;
-    -moz-animation-delay: .75s;
-    animation-delay: .75s;
 }
 
 .footer {

@@ -1,5 +1,6 @@
 import { Col, Container, Row, Button } from 'react-bootstrap'
 import headerRightImg from './../../assets/headerImage.png'
+import { Typewriter } from 'react-simple-typewriter'
 
 const Intro = () => {
     return (
@@ -13,12 +14,23 @@ const Intro = () => {
                   Mahadi Saputra's
                 </div>
                 <div className='title fs-1 fs-md-6 my-2'>
-                  <span></span>
+                  <span>
+                  <Typewriter
+                    words={['Landing Page', 'Official Site', 'Portfolio Page', 'CV Site']}
+                    loop={999}
+                    cursor
+                    cursorBlinking
+                    cursorStyle='_'
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
+                  </span>
                 </div>
                 <div className='description fs-6 mt-4'>
                   <span>
                     Website ini dibuat oleh diri saya sendiri. <br/>
-                    Menggunakan ReactJS, Bootstrap dan AOS.<br />
+                    Dengan ReactJS, Bootstrap, HTML, CSS & AOS.<br />
                     Website ini berisi tentang portofolio diri saya.<br />
                     Tampilan terinspirasi <strong>Harisenin.com</strong>\^o^/</span>
                 </div>
@@ -29,7 +41,7 @@ const Intro = () => {
             </Col>
             <Col md='6'>
               <div className='d-none d-md-flex flex-md-column justify-content-end align-items-end text-dark'>
-                <img src={headerRightImg} style={{ width: "345px", height: "auto", marginLeft: "450px" }} alt='Gambar anime' />
+                <img src={ headerRightImg } style={{ width: "345px", height: "auto", marginLeft: "450px" }} alt='Gambar anime' />
               </div>
             </Col>
           </Row>

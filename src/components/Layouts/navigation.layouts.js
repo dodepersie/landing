@@ -19,9 +19,9 @@ const Navigationbar = () => {
                         to="/"
                         style={({ isActive }) => ({
                         color: isActive ? '#0dad8e' : '#000',
-                        textDecoration: isActive ? 'none' : 'none',
+                        textDecoration: 'none',
                         fontWeight: isActive ? 'bolder' : 'normal',
-                        })} className='me-3'
+                        })} className='p-2'
                         >
                             Beranda
                         </NavLink>
@@ -29,9 +29,9 @@ const Navigationbar = () => {
                         to="/tentang"
                         style={({ isActive }) => ({
                         color: isActive ? '#0dad8e' : '#000',
-                        textDecoration: isActive ? 'none' : 'none',
+                        textDecoration: 'none',
                         fontWeight: isActive ? 'bolder' : 'normal',
-                        })} className='me-3'
+                        })} className='p-2'
                         >
                             Tentang saya
                         </NavLink>

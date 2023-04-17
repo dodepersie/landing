@@ -3,6 +3,7 @@ import { faGraduationCap, faCodeBranch, faTrophy, faCode, faContactCard } from '
 import { faFacebookF, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Card, Container, Row, Col, ListGroup } from 'react-bootstrap'
 import myPic from './../../assets/pic.jpg'
+import { educationHistory, ability, award, experience } from '../Utilities/constants'
 
 const AboutMe = () => {
 
@@ -15,7 +16,7 @@ const AboutMe = () => {
                         <Col xs='12' md='4' className='mt-2'>
                             <div className='text-green fw-semibold'>
                                 <Card>
-                                <Card.Img variant="top" src={myPic} />
+                                <Card.Img variant="top" src={ myPic } />
                                 <Card.Body>
                                 <Card.Text>
                                     Nama saya adalah <strong>I Dewa Gede Mahadi Saputra</strong> dan biasa dipanggil <strong>Dode Mahadi</strong> atau <strong>Mahadi Saputra</strong>. Saya berasal dari <strong>Bali, Indonesia</strong>. Saya bisa bekerja sama dalam tim dan mengerjakan tugas dengan tepat waktu.
@@ -35,42 +36,14 @@ const AboutMe = () => {
                                 </Card.Title>
                                 <Card.Text>
                                     <ListGroup variant="flush" className="mt-3">
-                                        <ListGroup.Item>
-                                            TK Mandung
+                                        { educationHistory.map( ({ name, year }) => (
+                                            <ListGroup.Item>
+                                            { name }
                                             <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2006</span></h6>
+                                                <h6><span class="badge bg-primary">{ year }</span></h6>
                                             </div>
                                         </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            TK Star Kids
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2007</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            SD Bintang Persada
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2007-2013</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            SMP N 1 Tabanan
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2013-2016</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            SMA N 1 Tabanan
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2016-2019</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            ITB STIKOM Bali
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2019-sekarang</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
+                                        ))}
                                     </ListGroup>
                                 </Card.Text>
                                 </Card.Body>
@@ -86,50 +59,19 @@ const AboutMe = () => {
                                 </Card.Title>
                                 <Card.Text>
                                 <ListGroup variant="flush" className="mt-3">
-                                        <ListGroup.Item>
-                                        <div className="row">
-                                            <label className="col-sm-3 col-form-label">HTML</label>
-                                            <div className="col-sm-9">
-                                                <div className="progress my-2">
-                                                    <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "75%"}} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">                          
+                                        {ability.map( ({ name, percentage }) => (
+                                            <ListGroup.Item>
+                                            <div className="row">
+                                                <label className="col-sm-3 col-form-label">{ name }</label>
+                                                <div className="col-sm-9">
+                                                    <div className="progress my-2">
+                                                        <div className="progress-bar" role="progressbar" style={{ width: percentage }} aria-valuenow={ percentage } aria-valuemin="0" aria-valuemax="100">                          
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                        <div className="row">
-                                            <label className="col-sm-3 col-form-label">CSS</label>
-                                            <div className="col-sm-9">
-                                                <div className="progress my-2">
-                                                    <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "75%"}} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">                          
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                        <div className="row">
-                                            <label className="col-sm-3 col-form-label">React</label>
-                                            <div className="col-sm-9">
-                                                <div className="progress my-2">
-                                                    <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "50%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">                          
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                        <div className="row">
-                                            <label className="col-sm-3 col-form-label">Editing</label>
-                                            <div className="col-sm-9">
-                                                <div className="progress my-2">
-                                                    <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "75%"}} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">                          
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </ListGroup.Item>
+                                            </ListGroup.Item>
+                                        ))}
                                     </ListGroup>
                                 </Card.Text>
                                 </Card.Body>
@@ -148,16 +90,13 @@ const AboutMe = () => {
                                 </Card.Title>
                                 <Card.Text>
                                     <ListGroup variant='flush' className="mt-3">
-                                        <ListGroup.Item>
+                                        {award.map( ({ name }) => (
+                                            <ListGroup.Item>
                                             <div className="row">
-                                                Juara 1 Lomba Komputer Tingkat SD se-Kabupaten
+                                                { name }
                                             </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            <div className="row">
-                                                Juara 2 Lomba Logika-Office (Log-Off) Tingkat SMP se-Kabupaten
-                                            </div>
-                                        </ListGroup.Item>
+                                            </ListGroup.Item>
+                                        ))}
                                     </ListGroup>
                                 </Card.Text>
                                 </Card.Body>
@@ -173,30 +112,14 @@ const AboutMe = () => {
                                 </Card.Title>
                                 <Card.Text>
                                 <ListGroup variant="flush" className="mt-3">
-                                        <ListGroup.Item>
-                                            Blogging
+                                        {experience.map( ({ name, year }) => (
+                                            <ListGroup.Item>
+                                            { name }
                                             <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2011-2013</span></h6>
+                                                <h6><span class="badge bg-primary">{ year }</span></h6>
                                             </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            Web Dev
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2012-2015</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            Twitter API
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2013-2015</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item>
-                                            Online Seller
-                                            <div className='float-end'>
-                                                <h6><span class="badge bg-primary">2013-2015</span></h6>
-                                            </div>
-                                        </ListGroup.Item>
+                                            </ListGroup.Item>
+                                        ))}
                                     </ListGroup>
                                 </Card.Text>
                                 </Card.Body>

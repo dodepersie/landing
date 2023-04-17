@@ -32,7 +32,7 @@ const Content = () => {
                                     <FontAwesomeIcon icon={faGraduationCap} className='logoCard' />
                                 </Card.Title>
                                 <Card.Text>
-                                    Saat ini, saya adalah seorang mahasiswa di <strong>ITB STIKOM Bali</strong> angkatan tahun 2019
+                                   Saya adalah mahasiswa Dual Degree di <strong>ITB STIKOM Bali</strong> angkatan tahun 2019
                                 </Card.Text>
                                 </Card.Body>
                                 </Card>
@@ -46,7 +46,7 @@ const Content = () => {
                                     <FontAwesomeIcon icon={faCode} className='logoCard' />
                                 </Card.Title>
                                 <Card.Text>
-                                    Saya mengerti beberapa bahasa pemograman seperti: HTML, CSS, Javascript
+                                    Saya mengerti HTML, CSS, Javascript, PHP, mySQL, Web Deployment dan lainnya
                                 </Card.Text>
                                 </Card.Body>
                                 </Card>
