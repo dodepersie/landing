@@ -1,42 +1,31 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
-
+import { Col, Container, Row } from "react-bootstrap";
+import Socialmedia from "../Utilities/Socialmedia";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    return (
-        <div className='footer user-select-none'>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col my-2'>
-                        <div className='d-flex justify-content-center align-items-start float-md-start'>
-                            <span>&copy; v1.mahadisaputra.my.id @ { currentYear }</span>
-                        </div>
-                    </div>
-                    <div className='col my-2'>
-                        <div className='d-flex justify-content-center align-items-center float-md-end'>
-                            <button type="button" className='btn btn-primary me-1'>
-                                <a href="https://www.facebook.com/DodePersie" className="text-white">
-                                <FontAwesomeIcon icon={ faFacebookF } />
-                                </a>
-                            </button>
-                            <button type="button" className='btn btn-primary me-1'>
-                                <a href="https://instagram.com/mahadisptr" className="text-white">
-                                <FontAwesomeIcon icon={ faInstagram } />
-                                </a>
-                            </button>
-                            <button type="button" className='btn btn-dark'>
-                                <a href="https://github.com/DodePersie" className="text-white">
-                                <FontAwesomeIcon icon={ faGithub } />
-                                </a>
-                            </button>                          
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="footer user-select-none p-2">
+      <Container>
+        <Row xs={12}>
+          <Col className="my-2" xs={12} lg={6}>
+            <div className="d-flex justify-content-center align-items-center float-lg-start d-block d-lg-block">
+              <span className="text-center">
+                v1.mahadisaputra.my.id @ {currentYear}
+                <br />
+                Desain terinspirasi dari <strong>Harisenin.com</strong> 😍👋
+              </span>
             </div>
-        </div>
-    )
-}
+          </Col>
+          <Col className="my-2" xs={12} lg={6}>
+            <div className="d-flex justify-content-center align-items-center float-lg-end">
+              <Socialmedia />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,15 +1,48 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0dad8e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container .sectionTitle hr {
+    border: 5px solid #0dad8e;
+    border-radius: 10px;
+    width: 230px;
+}
+
 .navbar-default {
+    width: 100%;
     transition: 500ms ease;
     background: #f8f9fa;
+    opacity: 0.9;
 }
 
 .navbar-default.scrolled {
-    background: #fff;
+    background-color: #fff;
+    box-shadow: 0 10px 20px 0 #9aaacf33;
+}
+
+.navbar-default.scrolled a {
+    color: #fff;
 }
 
 .title {
@@ -17,36 +50,23 @@ body {
     font-weight: 600;
     line-height: 1;
     letter-spacing: 1px;
-    color: #222;
-}
-
-.title span .tes {
-    color: #0DAD8E;
 }
 
 .title span {
-    color: #007bff;
+    color: #0dad8e;
 }
 
-.headerImg {
-    height: 523px;
+.header {
     background-color: #f8f9fa;
     background-size: cover;
 }
 
-.rowMargin {
-    margin-top: 145px;
-}
-
-.intro {
-    height: 450px;
-    display: flex;
-    align-items: center;
-    color: #222;
-}
-
 .description {
     color: #0DAD8E;
+}
+
+.headerButton {
+    padding: 12px 26px;
 }
 
 .headerButton:hover {
@@ -60,17 +80,12 @@ body {
 }
 
 .logoCard {
-    color: #007bff;
-}
-
-.name:hover {
-    color: #0DAD8E;
-    transition: .25s linear;
+    color: #0dad8e;
 }
 
 .about {
     height: auto;
-    background: #fff);
+    background: #fff;
     background-size: cover;
 }
 
@@ -79,15 +94,106 @@ body {
 }
 
 .card {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: 0 10px 20px 0 #9aaacf33;
+    border: none;
+}
+
+@media (max-width: 576px) {
+    #introduction.card {
+        height: 230px;
+    }
+}
+
+@media (min-width: 992px) {
+    #introduction.card {
+        height: 135px;
+    }
+}
+
+.card-img {
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .card-img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-img {
+        height: 350px;
+    }
+}
+
+.card-title a {
+    color: #222;
+    transition: .5s;
+}
+
+.card-title a:hover {
+    color: #0dad8e;
+}
+
+.card-title hr {
+    border: 1px solid #0dad8e;
+}
+
+.card-footer {
     border: none;
 }
 
 .footer {
     background-color: #f8f9fa;
-    padding: 20px;
+}
+
+.socialMediaIcon {
+    border: 1px solid #198754;
+    border-radius: 50%;
+    transition: transform .5s;
+}
+
+.socialMediaIcon:hover {
+    transform: scale(1.2);
+}
+
+.clientIcon {
+    transition: .5s;
+}
+
+.clientIcon:hover {
+    color: #0dad8e;
+}
+
+.socialMedia a {
+    color: #222;
+}
+
+.socialMedia a:hover {
+    color: #0dad8e;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+    border: 2px solid #0dad8e;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+textarea {
+    resize: none;
 }
 
 .list-group-item {
     border: none;
+}
+
+.content {
+    background-color: #FFF;
 }
