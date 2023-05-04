@@ -14,7 +14,7 @@ const Project = () => {
             <hr /> Proyek saya 👇
           </span>
           <Row xs={12}>
-            {proyekSaya.sort((a, b) => a.title.localCompare(b.title)).map(({ thumbnail, name, desc, code, link }, index) => (
+            {proyekSaya.sort((a, b) => a.name.localeCompare(b.name)).map(({ thumbnail, name, desc, code, link }, index) => (
               <Col
                 data-aos="zoom-in"
                 xs={12}
